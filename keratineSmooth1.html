@@ -1,0 +1,76 @@
+
+<html>
+<head>
+
+<style>
+
+    .container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color:brown;
+  font-size: 2rem;
+  text-align: center;
+}
+.content1 {
+  animation: fade-in 3s ease-out forwards;
+}
+.content2 {
+  animation: fade-in 3s ease-out 5s forwards;
+}
+.hidden {
+  display: none;
+}
+.ks {
+    width: 500px;
+    height: 500px;
+    background-image: url("ks.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 50px;
+  }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+
+}
+
+</style>
+
+</head>
+
+
+<div class="container">
+  <div class="content content1">
+    <h1>Seems Like You are Having a Frizzy Hair</h1>
+    <p>Had a Bad Hair Day?</p>
+  </div>
+  <div class="content content2 hidden">
+    <h1>TRY OUT TRESEME KERATINE SMOOTH</h1>
+    <p></p>
+    <div class="ks"></div>
+
+  </div>
+</div>
+
+<script>
+    setTimeout(function() {
+  document.querySelector('.content1').classList.add('hidden');
+  document.querySelector('.content2').classList.remove('hidden');
+}, 5000);
+
+</script>
